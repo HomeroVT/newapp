@@ -65,7 +65,7 @@ jobs:
             docker update --restart=no newapp || true
             docker stop $(docker ps -a -q) || true
             docker rm $(docker ps -a -q) || true
-            docker run -d --restart unless-stopped -p 3000:3000 --name newapp
+            docker run -d --restart unless-stopped -p 3000:3000 --name main
             docker ps
             docker ps -a
 
