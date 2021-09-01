@@ -64,7 +64,7 @@ jobs:
             docker pull homervt/newapp:main
             IMAGE_ID=`docker images | awk '{ print $3 }' | grep -v IMAGE`
             echo $IMAGE_ID
-            docker run -it -p 3000:3000 $IMAGE_ID
+            docker run -d -p 3000:3000 $IMAGE_ID
             docker ps
             docker ps -a
 
